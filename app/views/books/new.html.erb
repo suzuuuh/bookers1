@@ -1,2 +1,28 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h1>Books</h1>
+
+<nav>
+  <ul class="nav-list">
+        <li class="nav-list-item">a</li>
+        <li class="nav-list-item">b</li>
+        <li class="nav-list-item"><a href="index.html">Show</a></li>
+        <li class="nav-list-item"><a href="index.html">Edit</a></li>
+        <li class="nav-list-item"><a href="index.html">Destroy</a></li>
+  </ul>
+</nav>
+
+<h4>Title Body</h4>
+
+<h3>New Book</h3>
+
+<%= form_with model: @Books, url:'/books' do |f| %>
+
+  <h5>Title</h5>
+  <%= f.text_field :title %>
+
+  <h5>Body</h5>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Create Book' %>
+<% end %>
+
+
